@@ -7,8 +7,7 @@ In order for it to work, you need:
 4) !You can create any dashboard for a Python application, but you need to make a PromQL request to Prometheus 
    Now you need to add PythonApp and NodeExporter to Prometheus
 5) To do this, you need to add to volume along the way `/var/lib/docker/volumes/<your_compose_name>-prom-configs/_data/prometheus.yml` the following:
-   ```
-    .....
+   ``` .....
     .....
     .....
   - job_name: "prometheus"
@@ -22,9 +21,7 @@ In order for it to work, you need:
   
   - job_name: 'pyth-pr'  # <-- and this
     static_configs:
-      - targets: ['py_pr_cont:3333']
-
-   ```
+      - targets: ['py_pr_cont:3333']```
 
   Really Important!. now you need to reload the config
 6) we find the pid of the container with prometheus `docker ps | grep prometheus`
