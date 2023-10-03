@@ -9,11 +9,11 @@ In order for it to work, you need:
 5) To do this, you need to add to volume bottom along the way `/var/lib/docker/volumes/<your_compose_name>-prom-configs/_data/prometheus.yml` the following:
 
 ```
-  - job_name: 'node-exporter'   # <-- this
+  - job_name: 'node-exporter'  
     static_configs:
       - targets: ['node-exporter:9100']
   
-  - job_name: 'pyth-pr'  # <-- and this
+  - job_name: 'pyth-pr' 
     static_configs:
       - targets: ['py_pr_cont:3333']
 ```
