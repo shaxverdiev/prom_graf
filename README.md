@@ -15,7 +15,8 @@ In order for it to work, you need:
   
   - job_name: 'pyth-pr'  # <-- and this
     static_configs:
-      - targets: ['py_pr_cont:3333']```
+      - targets: ['py_pr_cont:3333']
+```
 
   Really Important!. now you need to reload the config
 6) we find the pid of the container with prometheus `docker ps | grep prometheus`
